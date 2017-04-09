@@ -1,0 +1,92 @@
+<form role="form" [formGroup]="businessForm" novalidate (submit)="addBusiness()">
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="businessName">Name</label>
+                <input class="form-control invalid" type="text" name="businessName" formControlName="businessName">
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="category">Category</label>
+
+                <select name="category" id="" class="form-control invalid" formControlName="category">
+                    <option *ngFor="let category of categories" value="{{category.name}}">{{category.name}}</option>
+                </select>
+
+                
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="yearsInBusiness">Years in Business</label>
+                <input class="form-control invalid" type="text" name="yearsInBusiness" formControlName="yearsInBusiness">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control invalid" type="email" name="email" formControlName="email">
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input class="form-control invalid" type="text" name="phone" formControlName="phone">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="street">Street</label>
+                <input class="form-control invalid" type="text" name="street" formControlName="street">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="city">City</label>
+                <input class="form-control invalid" type="text" name="city" formControlName="city">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="state">State</label>
+                <input class="form-control invalid" type="text" name="state" formControlName="state">
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="zipcode">Zipcode</label>
+                <input class="form-control invalid" type="text" name="zipcode" formControlName="zipcode">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control invalid" rows="3" cols="106" formControlName="description"></textarea>
+            </div>
+        </div>
+
+    </div>
+    
+</form>
